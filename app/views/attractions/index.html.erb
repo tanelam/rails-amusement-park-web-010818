@@ -1,0 +1,10 @@
+
+
+<ul>
+<% @attractions.each do |attraction|  %>
+<%= attraction.name %>
+<li><%= link_to "Go on #{attraction.name}", attraction_path(attraction) %></li>
+<li><%= button_to name="Go on this ride", "/users/#{session[:user_id]}", method: 'get' %></li>
+
+<% end %>
+</ul>
